@@ -1,0 +1,19 @@
+html,body{overflow:hidden;} #menu {position:fixed;width:50px;bottom:10px;left:10px;filter:drop-shadow(2px 4px 6px black);cursor:pointer;transition:scale 0.2s ease;} #menu:hover {scale:1.1}
+
+div:has(i) {
+  position: fixed;
+  background: gray;
+  color: white;
+  width: 35%;
+  padding: 30px;
+  top: -500px;
+  left: 50%;
+  transform: translate(-50%,-0%);
+  text-align: center;
+  font-size: 25pt;
+  border-radius: 20px;
+  filter: drop-shadow(2px 4px 6px black);
+  transition: top 0.5s linear;
+}
+
+.slideIn {top:10px}

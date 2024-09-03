@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>The Chicken Coop</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="navbar.js"></script>
+  <script src="gameslist.js"></script>
+</head>
+
+<body>
+  <nav-bar></nav-bar>
+  <div style="display:none;" class="main-stuff">
+    <h1>Recent Games</h1>
+    <div class="recents"></div>
+  </div>
+  <div style="display:none;" class="onboard">
+    <h1>Play games to get started</h1>
+    <h2>Our Picks: <a href="/game/?driftboss">Drift Boss</a>, <a href="/game/?minecraft">Minecraft</a></h2>
+  </div>
+  <script>
+    let recentGames = JSON.parse(localStorage.getItem("recentGames") || '[]')
+
+    if (recentGames.length != 0) {
+      document.querySelector(".main-stuff").style.display='block'
+      // document.querySelector(".main-stuff h1").innerText=recentGames.join(", ")
+      document.querySelector('.recents').innerHTML=''
+      recentGames.forEach(recent => {
+        document.querySelector('.recents').innerHTML+=`
+        <div class="recent">
+          <img src="${gameList[recent].image}">
+          <gametitle>${gameList[recent].name}</gametitle>
+        </div>`
+      })
+    } else {
+      document.querySelector(".onboard").style.display='block'
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin:0;
+  font-family: 'Play', sans-serif;
+  /* background:#343434; */
+}
+
+.onboard {
+  margin:8px;
+  padding:30px;
+  border:5px solid black;
+  border-radius:10px;
+  width:max-content;
+  height:max-content;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+}
+
+.recent {
+  width: 150px;
+  background: #343434;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.recent > img {
+  width: 90%;
+  border-radius: 10px;
+}
+
+.recent > gametitle {
+  font-size:15pt;
+}
+
+a {
+  color:black;
+}
