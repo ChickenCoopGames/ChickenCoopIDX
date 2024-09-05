@@ -1,6 +1,0 @@
-GeoGusser:https://geogusserclone.vercel.app/
-mc: https://github.com/Ercuos/Eaglercraft
-drift boss
-happy Wheels:https://66cd25f754a43e506610bf5e--tiny-brioche-592be5.netlify.app/
-https://github.com/evmaneh/vercel-proxy
-https://github.com/boston2029/vercel-proxy this one

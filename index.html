@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -29,7 +28,7 @@
       document.querySelector('.recents').innerHTML=''
       recentGames.forEach(recent => {
         document.querySelector('.recents').innerHTML+=`
-        <div class="recent">
+        <div onclick="location.href='/game/?${recent}'" class="recent">
           <img src="${gameList[recent].image}">
           <gametitle>${gameList[recent].name}</gametitle>
         </div>`

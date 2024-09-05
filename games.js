@@ -1,6 +1,6 @@
 let hasSeenTip = localStorage.getItem("hasSeenTip") || false
 
-const unlockedGames = ['driftboss', 'minecraft', 'geoguessr', 'amongus', 'cookieclicker'].concat(JSON.parse(localStorage.getItem("unlockedGames")||'[]'))
+const unlockedGames = ['driftboss', 'minecraft', 'geoguessr', 'amongus', 'cookieclicker', 'geforce'].concat(JSON.parse(localStorage.getItem("unlockedGames")||'[]'))
 
 const currentGame = location.href.split("?")[1]
 

@@ -29,6 +29,12 @@ html, body {
   border-radius: 10px;
   text-align: center;
   color: white;
+  cursor: pointer;
+  transition:background 0.3s ease;
+}
+
+.recent:hover {
+  background: #555555;
 }
 
 .recent > img {
