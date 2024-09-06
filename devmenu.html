@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dev Menu</title>
+</head>
+<body>
+    <h1>Dev Menu</h1>
+    <p>Current Tokens: <span id="tokenCount">0</span></p>
+
+    <input type="number" id="tokenChange" placeholder="Enter token change">
+    <button onclick="updateTokens()">Update Tokens</button>
+
+    <button onclick="window.location.href='tokens.html'">Back to Tokens</button> 
+
+    <script>
+        let tokens = loadTokens(); // Load tokens from local storage
+        document.getElementById('tokenCount').textContent = tokens;
+
+        function updateTokens() {
+            const change = parseInt(document.getElementById('tokenChange').value);
+            if (!isNaN(change)) {
+                tokens += change;
+                document.getElementById('tokenCount').textContent = tokens;
+                saveTokens(tokens); // Save updated tokens to local storage
+            }
+        }
+
+        function loadTokens() {
+            return parseInt(localStorage.getItem('tokens')) || 0; // Load or default to 0
+        }
+
+        function saveTokens(value) {
+            localStorage.setItem('tokens', value);
+        }
+    </script>
+</body>
+</html>
