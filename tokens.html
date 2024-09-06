@@ -6,9 +6,23 @@
   <meta name="viewport" content="width=device-width">
   <title>Tokens</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <script src="navbar.js"></script>
-</head>
+  <script src="navbar.js"></script><script>
+  let typedString = ''; // Initialize outside the event listener
 
+document.addEventListener('keydown', function(event) {
+    if (event.key.length === 1) { 
+        typedString += event.key; 
+        console.log("Typed string so far:", typedString); 
+    }
+    if (typedString === 'bananaman') {
+        console.log("Secret code entered!"); 
+        window.location.href = 'devmenu.html';
+        typedString = ''; // Reset after successful entry
+    }
+});
+
+</script>
+</head>
 <body>
   <nav-bar></nav-bar>
   <h1>Tokens - 0</h1>
@@ -20,5 +34,4 @@
     font-size: 15pt;
   ">Pay 7 tokens. Play at least 4 hours for the next week, get 14 tokens back!</span></div>
 </body>
-
 </html>
